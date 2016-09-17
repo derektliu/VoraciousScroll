@@ -360,7 +360,7 @@ angular.module('smartNews.home', ['smartNews.services', 'smartNews.timeline'])
           .range(['#222', '#333', '#444', '#555', '#666', '#777', '#888', '#999', '#aaa', '#bbb', '#ccc', '#ddd']);
 
         words = words.map(function(d) {
-          return {text: d.value, size: (total / d.count) / 1.4};
+          return {text: d.value, size: (total / d.count)};
         });
 
         var svg = d3.selectAll('.wordCloud')
@@ -392,6 +392,7 @@ angular.module('smartNews.home', ['smartNews.services', 'smartNews.timeline'])
         d3.layout.cloud().size([size.width, size.height])
           .words(words)
           .rotate(0)
+          .padding(5)
           .fontSize(function(d) { return d.size; })
           .on('end', drawCloud)
           .start();
