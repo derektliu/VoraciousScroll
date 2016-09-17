@@ -441,6 +441,4 @@ angular.module('smartNews.home', ['smartNews.services', 'smartNews.timeline'])
   };
 
   $rootScope.addnewSearch = $scope.addnewSearch;
-
-
 });
