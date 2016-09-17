@@ -435,7 +435,8 @@ angular.module('smartNews.home', ['smartNews.services', 'smartNews.timeline'])
 
   $scope.addnewSearch = function(data) {
 
-    data['traffic'] = "many";
+    data['traffic'] = " ";
+    $scope.rowshow = {};
     $scope.front.unshift(data);
 
 
