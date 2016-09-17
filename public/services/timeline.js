@@ -207,6 +207,7 @@ angular.module('smartNews.timeline', [])
    * Cloud graph starts here
    */
   var renderCloud = function(words) {
+    d3.select('.wordCloud').select('svg').remove();
     var size = {width: 300, height: 180};
     //Remove any old svg in the renderCloud div
 
@@ -253,6 +254,7 @@ angular.module('smartNews.timeline', [])
   };
 
   var renderSentiment = function(data) {
+    d3.select('.chart').select('svg').remove();
     var chartWidth = 250;
     var barHeight = 50;
     var groupHeight = barHeight * data.length;
