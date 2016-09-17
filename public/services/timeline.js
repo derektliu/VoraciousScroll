@@ -220,7 +220,7 @@ angular.module('smartNews.timeline', [])
       .range(['#222', '#333', '#444', '#555', '#666', '#777', '#888', '#999', '#aaa', '#bbb', '#ccc', '#ddd']);
 
     words = words.map(function(d) {
-      return {text: d.value, size: (total / d.count) / 3};
+      return {text: d.value, size: (total / d.count)};
     });
 
     var svg = d3.selectAll('.wordCloud')
